@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wacha</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+	    <style>
+			article{ /*<!
+	-definiendo estilo de la etiqueta article --> */
+				position: relative;
+				width: 250px;
+				transition: all .3s ease;
+			}
+			article img:first-child{   /*representa el primer elemento entre un grupo de elementos hermanos.*/
+				box-shadow: 0 60px 60px
+				-60px rgba(0,30, 255, 0.5);
+				border-radius: 4px;
+				object-fit: cover;
+				width: 100%;
+			}
+			article img:last-child{/*representa el ultimo elemento entre un grupo de elementos hermanos.*/
+				position: absolute;
+				width: 100px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				transform: translateY(25%);
+				transition: all .3s ease;
+				opacity: 0;
+			}
+			article:hover{/*interaccion con el elemento (imagen).*/
+				transform:
+				perspective(250px)
+				rotateX(10deg)
+				translateY(-5%)
+				translateZ(0);
+			}
+			article::before{ /* antes de la interaccion con el elemento (imagen).*/
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 100%;
+				width: 100%;
+				background-image:
+				linear-gradient(  /*crea una imagen que consiste en una transición progresiva entre dos o más colores a lo largo de una línea recta*/
+					to bottom,
+					transparent 10%,
+					rgba(0,0,0,0.5) 50%,
+					rgba(0,0,0) 95%
+				);
+				opacity: 0;
+				transition: all .3s ease;
+			}
+			article:hover::before{ /*interaccion con el elemento (imagen) antes de pasar el mouse.*/
+				opacity: 1;
+			}
+			article:hover img:last-child{/*interaccion con el ultimo elemento (imagen).*/
+				opacity: 1;
+				transform: translateY(10%);
+			}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <!-- Icono similar a YouTube -->
+            <img src="https://w7.pngwing.com/pngs/115/555/png-transparent-youtube-computer-icons-logo-silhouette-youtube-angle-desktop-wallpaper-w-kamau-bell-thumbnail.png" alt="Logo" style="width: 40px;">
+            YuGames
+        </a>                                                                                                                                            
+        <!-- Barra de búsqueda -->
+        <form class="form-inline my-2 my-lg-0 mx-auto" style="width: 50%;">
+            <input class="form-control mr-sm-2 w-100" type="search" placeholder="" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+        <!-- Iconos de usuario -->
+        <div class="ml-auto">
+            <button class="btn btn-outline-primary">Iniciar sesión</button>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="Elden.html">
+					<img src="y1.jpg" alt="">
+					<img src="y2.jpg" alt="">
+					</a>	
+				</article>
+                <h2 class="card-title">Elden Ring</h2>
+                <p class="card-text">RPG de acción en un mundo abierto, con combates desafiantes y una narrativa profunda, desarrollado por FromSoftware.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="Dark.html">
+					<img src="y3.jpg" alt="">
+					<img src="y4.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Dark Souls</h2>
+                <p class="card-text">RPG de acción conocido por su dificultad elevada, exploración en un mundo oscuro y combate preciso.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="dragon.html">
+					<img src="y5.jpg" alt="">
+					<img src="y6.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Dragon Ball Budokai Tenkaichi 3</h2>
+                <p class="card-text">Juego de lucha basado en el anime Dragon Ball Z, con un elenco extenso de personajes y batallas espectaculares.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="arceus.html">
+					<img src="y7.jpg" alt="">
+					<img src="y8.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Pokemon Legendas Arceus</h2>
+                <p class="card-text">Juego de aventuras en el que exploras una región en el pasado de Pokémon, con mecánicas de captura y combate mejoradas.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="souls2.html">
+					<img src="y9.jpg" alt="">
+					<img src="y10.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Dark Souls 2</h2>
+                <p class="card-text">Secuela de Dark Souls, con un mundo interconectado, combate desafiante y una historia ambientalmente contada.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="dead.html">
+					<img src="y11.jpg" alt="">
+					<img src="y12.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Dead Space</h2>
+                <p class="card-text"> Juego de terror de supervivencia, con una jugabilidad centrada en la exploración y combate contra monstruos en una nave espacial.</p>
+            </div>
+             <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="sekiro.html">
+					<img src="y13.jpg" alt="">
+					<img src="y14.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Sekiro</h2>
+                <p class="card-text">Juego de acción y aventura con un enfoque en el sigilo y el combate de espada, ambientado en el Japón feudal.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="nier.html">
+					<img src="y15.jpg" alt="">
+					<img src="y16.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Nier Automata</h2>
+                <p class="card-text">RPG de acción con una historia filosófica sobre androides y su lucha contra una invasión de máquinas en un mundo post-apocalíptico.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="pokemon.html">
+					<img src="y17.jpg" alt="">
+					<img src="y18.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Pokemon Escarlata y Purpura</h2>
+                <p class="card-text">Juegos de mundo abierto de la saga Pokémon, con nuevos Pokémon y una exploración libre en una región inspirada en España.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="kakarot.html">
+					<img src="y19.jpg" alt="">
+					<img src="y20.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Dragon Ball Kakarot</h2>
+                <p class="card-text">RPG de acción que permite revivir la historia de Dragon Ball Z, con batallas épicas y una narrativa centrada en Goku.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="spider.html">
+					<img src="y21.jpg" alt="">
+					<img src="y22.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Spider-Man 2</h2>
+                <p class="card-text">Juego de acción y aventuras en el que controlas a Spider-Man mientras luchas contra supervillanos y exploras Nueva York.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="gta.html">
+					<img src="y23.jpg" alt="">
+					<img src="y24.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">GTA Trilogy</h2>
+                <p class="card-text">Remasterización de tres clásicos de la saga Grand Theft Auto: III, Vice City y San Andreas, en un mundo de acción y crimen abierto.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="red.html">
+					<img src="y25.jpg" alt="">
+					<img src="y26.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Red dead Redemption 2</h2>
+                <p class="card-text">Juego de acción-aventura en un mundo abierto, donde vives la historia de un forajido en el ocaso del Salvaje Oeste.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="mine.html">
+					<img src="y27.jpg" alt="">
+					<img src="y28.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Minecraft</h2>
+                <p class="card-text">Juego de construcción y supervivencia en un mundo generado por bloques, donde puedes explorar, crear y sobrevivir.</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="fnaf.html">
+					<img src="y29.jpg" alt="">
+					<img src="y30.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">five nights at freddy's</h2>
+                <p class="card-text">Juego de terror donde gestionas una pizzería vigilando cámaras de seguridad para evitar que animatrónicos te atrapen.</p>
+            </div>
+             <div class="col-12 col-md-6 col-lg-3 mb-3">
+				<article>
+					<a href="stray.html">
+					<img src="y31.jpg" alt="">
+					<img src="y32.jpg" alt="">
+					</A>	
+				</article>
+                <h2 class="card-title">Stray</h2>
+                <p class="card-text">Juego de aventuras en tercera persona en el que controlas a un gato en un mundo futurista lleno de robots y secretos por descubrir.</p>
+            </div>
+        </iframe>
+               
+    </div>        
+
+</body>

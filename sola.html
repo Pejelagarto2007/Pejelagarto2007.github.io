@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .sistema-solar {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sol {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            z-index: 1;
+        }
+
+        .orbita {
+            position: absolute;
+            border: 1px dashed white;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .planeta {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #00f;
+            transform-origin: center; /* Para que el planeta gire alrededor del sol */
+            transition: transform 0.1s linear;
+        }
+
+        /* Color de los planetas */
+        .mercurio { background-color: #808080; width: 10px; height: 10px; }
+        .venus { background-color: #ffcc00; width: 15px; height: 15px; }
+        .tierra { background-color: #008000; width: 20px; height: 20px; }
+        .marte { background-color: #ff0000; width: 18px; height: 18px; }
+        .jupiter { background-color: #ff7f00; width: 50px; height: 50px; }
+        .saturno { background-color: #ffff00; width: 45px; height: 45px; }
+        .urano { background-color: #00ffff; width: 35px; height: 35px; }
+        .neptuno { background-color: #0000ff; width: 30px; height: 30px; }
+    </style>
+</head>
+<body>
+    <div class="sistema-solar">
+        <div class="sol"></div>
+
+        <!-- Órbitas -->
+        <div class="orbita" style="width: 180px; height: 180px;"></div>
+        <div class="orbita" style="width: 250px; height: 250px;"></div>
+        <div class="orbita" style="width: 300px; height: 300px;"></div>
+        <div class="orbita" style="width: 350px; height: 350px;"></div>
+        <div class="orbita" style="width: 450px; height: 450px;"></div>
+        <div class="orbita" style="width: 550px; height: 550px;"></div>
+        <div class="orbita" style="width: 650px; height: 650px;"></div>
+        <div class="orbita" style="width: 750px; height: 750px;"></div>
+
+        <!-- Planetas -->
+        <div class="planeta mercurio" style="transform: rotate(0deg) translateX(90px);"></div>
+        <div class="planeta venus" style="transform: rotate(0deg) translateX(125px);"></div>
+        <div class="planeta tierra" style="transform: rotate(0deg) translateX(150px);"></div>
+        <div class="planeta marte" style="transform: rotate(0deg) translateX(175px);"></div>
+        <div class="planeta jupiter" style="transform: rotate(0deg) translateX(225px);"></div>
+        <div class="planeta saturno" style="transform: rotate(0deg) translateX(275px);"></div>
+        <div class="planeta urano" style="transform: rotate(0deg) translateX(325px);"></div>
+        <div class="planeta neptuno" style="transform: rotate(0deg) translateX(375px);"></div>
+    </div>
+
+    <script>
+        let mercurio = document.querySelector(".mercurio");
+        let venus = document.querySelector(".venus");
+        let tierra = document.querySelector(".tierra");
+        let marte = document.querySelector(".marte");
+        let jupiter = document.querySelector(".jupiter");
+        let saturno = document.querySelector(".saturno");
+        let urano = document.querySelector(".urano");
+        let neptuno = document.querySelector(".neptuno");
+
+        let mercurioA = 0, venusA = 0, tierraA = 0, marteA = 0, jupiterA = 0, saturnoA = 0, uranoA = 0, neptunoA = 0;
+
+        // Velocidades de rotación de los planetas (en grados por cuadro)
+        let velocidadMercurio = 8.0;
+        let velocidadVenus = 7.0;
+        let velocidadTierra = 6.0;
+        let velocidadMarte = 5.0;
+        let velocidadJupiter = 4.0;
+        let velocidadSaturno = 3.0;
+        let velocidadUrano = 2.0;
+        let velocidadNeptuno = 1.0;
+
+        function mover() {
+            // Ajusta la rotación de cada planeta alrededor del sol
+            mercurio.style.transform = `rotate(${mercurioA}deg) translateX(90px)`;
+            venus.style.transform = `rotate(${venusA}deg) translateX(125px)`;
+            tierra.style.transform = `rotate(${tierraA}deg) translateX(150px)`;
+            marte.style.transform = `rotate(${marteA}deg) translateX(175px)`;
+            jupiter.style.transform = `rotate(${jupiterA}deg) translateX(225px)`;
+            saturno.style.transform = `rotate(${saturnoA}deg) translateX(275px)`;
+            urano.style.transform = `rotate(${uranoA}deg) translateX(325px)`;
+            neptuno.style.transform = `rotate(${neptunoA}deg) translateX(375px)`;
+
+            // Incrementa el ángulo de rotación de cada planeta
+            mercurioA += velocidadMercurio;
+            venusA += velocidadVenus;
+            tierraA += velocidadTierra;
+            marteA += velocidadMarte;
+            jupiterA += velocidadJupiter;
+            saturnoA += velocidadSaturno;
+            uranoA += velocidadUrano;
+            neptunoA += velocidadNeptuno;
+
+            // Llama a la siguiente animación
+            requestAnimationFrame(mover);
+        }
+
+        mover(); // Iniciar la animación
+    </script>
+</body>
+</html>

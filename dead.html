@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video en el centro con texto abajo</title>
+    <style>
+        /* Estilos generales para centrar todo el contenido */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('5.jpg'); /* Imagen de fondo */
+            background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Título en la parte superior */
+        h1 {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            font-size: 3em;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para que sea legible */
+        }
+
+        /* Contenedor del video */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo del video */
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Bordes redondeados al video */
+        }
+
+        /* Estilo para el texto debajo del video */
+        .texto {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para el texto */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Título en la parte superior -->
+    <h1>𝒟𝑒𝒶𝒹 𝒮𝓅𝒶𝒸𝑒</h1>
+
+    <div class="video-container">
+        <!-- Video centrado en la página -->
+        <video controls>
+            <source src="6.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+        <!-- Texto debajo del video -->
+        <div class="texto">
+Dead Space es un juego de horror de supervivencia en tercera persona que combina mecánicas de disparos con una atmósfera tensa y espeluznante. Los jugadores asumen el rol de Isaac Clarke, un ingeniero atrapado en una estación espacial infestada por criaturas grotescas conocidas como Necromorfos. El juego es famoso por su diseño visual y su habilidad para crear tensión.
+        </div>
+    </div>
+</body>
+
+</html>
